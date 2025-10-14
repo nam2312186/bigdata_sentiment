@@ -1,0 +1,19 @@
+=== Sentiment Dataset Statistics ===
+
+Total Rows: 74682
+Columns: ['ID', 'Topic', 'Sentiment', 'Text']
+
+Missing Values:
+ID             0
+Topic          0
+Sentiment      0
+Text         686
+dtype: int64
+
+Sentiment Distribution:
+Sentiment
+Negative      22542
+Positive      20832
+Neutral       18318
+Irrelevant    12990
+Name: count, dtype: int64

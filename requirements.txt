@@ -1,0 +1,11 @@
+pyspark
+kafka-python
+textblob
+nltk
+pandas
+numpy
+plotly
+streamlit
+matplotlib
+requests
+

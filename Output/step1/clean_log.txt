@@ -1,0 +1,5 @@
+=== Step1 Basic Cleaning Report ===
+
+Missing Text trước khi xử lý: 686
+Missing Text sau khi xử lý: 0
+Tổng số dòng sau khi xử lý: 74682

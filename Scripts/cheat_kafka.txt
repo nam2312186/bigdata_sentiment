@@ -1,0 +1,21 @@
+cd /mnt/d/FILEC/Programs/Kafka/kafka_2.13-3.7.0
+
+
+1. Start ZooKeeper (Kafka 3.x)
+   bin/zookeeper-server-start.sh config/zookeeper.properties
+   → Khởi động ZooKeeper (bắt buộc với Kafka 3.x).
+
+
+2. Start Kafka Broker
+   bin/kafka-server-start.sh config/server.properties
+   → Khởi động Kafka server (broker) trên localhost:9092.
+
+3. create topic
+bin/kafka-topics.sh --create --topic twitter_stream --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+4.spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.13:4.0.1 step3_spark_streaming.py
+deactivate
+
+1.
+bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+
