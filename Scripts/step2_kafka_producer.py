@@ -7,7 +7,8 @@ import time
 import os
 
 # === 1️⃣ Cấu hình đường dẫn và Kafka ===
-input_path = "../Output/step1/clean_data.csv"
+# input_path = "../Output/step1/clean_data.csv"
+input_path = "../Output/step1/clean_vietnamese_compat.csv"
 output_dir = "../Output/step2"
 os.makedirs(output_dir, exist_ok=True)
 log_file = os.path.join(output_dir, "producer_log.txt")

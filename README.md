@@ -76,7 +76,7 @@ cd /d D:\Kafka\kafka_2.13-3.7.0
 bin\windows\kafka-topics.bat --create --topic twitter_stream --bootstrap-server 127.0.0.1:9092 --partitions 1 --replication-factor 1
 ```
 
-# run code step2 :
+# run code step2 : (venv)
 ```bash
 python step2_kafka_producer.py
 ```
