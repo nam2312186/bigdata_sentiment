@@ -81,11 +81,24 @@ bin\windows\kafka-topics.bat --create --topic twitter_stream --bootstrap-server 
 python step2_kafka_producer.py
 ```
 
+
+
 # run code step3
+```
+set PYSPARK_PYTHON=D:\Daihoc\Nam3\BIGDATA\BTL\bigdata_sentiment\venv\Scripts\python.exe
+set PYSPARK_DRIVER_PYTHON=D:\Daihoc\Nam3\BIGDATA\BTL\bigdata_sentiment\venv\Scripts\python.exe
+
+```
 ```bash
 spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.13:4.0.1 Scripts\step3_spark_streaming.py
 ```
 
+```bash
+streamlit run Scripts\step4_dashboard.py
+```
+
 
 # Sau đó xóa topic cũ ()
+```bash
 bin\windows\kafka-topics.bat --delete --topic twitter_stream --bootstrap-server localhost:9092
+```
