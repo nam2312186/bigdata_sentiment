@@ -54,8 +54,8 @@ def crawl_reddit(keyword="google", limit=300):
 if __name__ == "__main__":
     # 5. Thiết lập đường dẫn lưu file
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    RAW_DIR = os.path.join(BASE_DIR, "data", "raw")
-    os.makedirs(RAW_DIR, exist_ok=True)
+    OUTPUT_DIR = os.path.join(BASE_DIR, "Output", "step0")
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     # 6. Crawl
     df = crawl_reddit(keyword="google", limit=300)
@@ -64,6 +64,6 @@ if __name__ == "__main__":
     if df.empty:
         print("[WARN] Không crawl được bản ghi nào. Kiểm tra lại API / mạng / keyword.")
     else:
-        output_path = os.path.join(RAW_DIR, "reddit_raw.csv")
+        output_path = os.path.join(OUTPUT_DIR, "reddit_raw.csv")
         df.to_csv(output_path, index=False, encoding="utf-8")
         print(f"[OK] Đã lưu {len(df)} dòng vào: {output_path}")

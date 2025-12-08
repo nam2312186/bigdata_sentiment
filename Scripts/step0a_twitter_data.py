@@ -36,7 +36,7 @@ with open(os.path.join(output_dir, "statistics.txt"), "w", encoding="utf-8") as 
     f.write(str(sentiment_counts))
 
 # === 7️⃣ Lưu mẫu dữ liệu 100 dòng ===
-sample_path = os.path.join(output_dir, "preview.csv")
+sample_path = os.path.join(output_dir, "twitter_preview.csv")
 df.head(100).to_csv(sample_path, index=False, encoding='utf-8')
 
 print("\n✅ Đã lưu:")

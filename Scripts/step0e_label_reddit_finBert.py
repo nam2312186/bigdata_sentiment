@@ -26,8 +26,8 @@ if __name__ == "__main__":
     PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
 
     # Đường dẫn file input: data/clean/reddit_clean.csv
-    CLEAN_DIR = os.path.join(PROJECT_DIR, "data", "clean")
-    INPUT_PATH = os.path.join(CLEAN_DIR, "reddit_clean.csv")
+    CLEAN_DIR = os.path.join(PROJECT_DIR, "Output", "step0")
+    INPUT_PATH = os.path.join(CLEAN_DIR, "preprocessed_clean_reddit.csv")
 
     print(f"[INFO] Đọc file: {INPUT_PATH}")
 
@@ -55,7 +55,7 @@ if __name__ == "__main__":
     df["sentiment"] = sentiments
 
     # Lưu ra data/labeled/reddit_labeled.csv
-    LABELED_DIR = os.path.join(PROJECT_DIR, "data", "labeled")
+    LABELED_DIR = os.path.join(PROJECT_DIR, "Output", "step0")
     os.makedirs(LABELED_DIR, exist_ok=True)
     OUTPUT_PATH = os.path.join(LABELED_DIR, "reddit_labeled.csv")
 

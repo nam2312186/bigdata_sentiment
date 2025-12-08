@@ -21,7 +21,7 @@ df.loc[df['Text'].str.strip() == "", 'Text'] = "None"
 missing_after = df['Text'].isna().sum()
 
 # === 4️⃣ Lưu dữ liệu đã xử lý ===
-output_path = os.path.join(output_dir, "clean_data.csv")
+output_path = os.path.join(output_dir, "twitter_clean.csv")
 df.to_csv(output_path, index=False, encoding='utf-8')
 
 # === 5️⃣ Ghi log thống kê ===
